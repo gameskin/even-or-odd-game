@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even OR Odd GAME</title>
+</head>
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Arial|Sofia&effect=neon|outline|emboss|shadow-multiple">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<style>
+    body {
+        text-align: center;
+        background-color: #432982;
+        color: white;
+        font-family: "Sofia", sans-serif;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+        background-color: #53567B;
+        border-radius: 20px;
+        border: #7278AF solid;
+        margin-top: 30px;
+    }
+
+    .game {
+        margin: auto;
+        max-width: 400px;
+    }
+
+    button {
+        background-color: #FD8E4A;
+        color: white;
+        border: #f0ebbb solid;
+        border-radius: 20px;
+        font-size: 25px;
+        font-family: "Sofia", sans-serif;
+        padding: 0 20px;
+    }
+
+    button:hover {
+        background-color: #ec6f22;
+    }
+
+    .userControl {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .container>p {
+        margin: 0;
+    }
+</style>
+
+<body>
+    <div class="game ">
+        <h2 id="display" class="font-effect-neon">EVEN OR Odd GAME ! 😊</H1>
+            <div class="container  font-effect-fire">
+                <p>Attemtps</p>
+                <p id="attempts">0</p>
+            </div>
+            <div class="container font-effect-fire">
+                <p>score</p>
+                <p id="score">0</p>
+            </div>
+            <h2>I think of a number do you think it is odd or even?</h2>
+            <div class="userControl">
+                <button onclick="guess('even')">Even</button>
+                <button onclick="guess('odd')">Odd</button>
+            </div>
+    </div>
+    <audio src="./correct.mp3" id="correct"></audio>
+    <audio src="./wrong.mp3" id="wrong"></audio>
+    <script src="./calc.js"></script>
+</body>
+
+</html>
